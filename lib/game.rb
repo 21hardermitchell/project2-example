@@ -10,7 +10,7 @@ class Game
         @players = @player_creator.get_players
         puts "Welcome #{@players.join(' and ')}"
     end
-
+mitchell
     def start
     end
 
