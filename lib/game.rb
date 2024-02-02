@@ -11,7 +11,6 @@ class Game
         puts "Welcome #{@players.join(' and ')}"
     end
 
-    mitch
     def start
     end
 
