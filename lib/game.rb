@@ -13,9 +13,11 @@ class Game
 
     def start
 
+        @player1 = @players[0]
+
         puts "The game will now begin..."
 
-        
+        puts "#{@player1} will go first!"
 
     end
 
