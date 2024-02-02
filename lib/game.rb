@@ -12,6 +12,11 @@ class Game
     end
 
     def start
+
+        puts "The game will now begin..."
+
+        
+
     end
 
 end
