@@ -21,13 +21,15 @@ class Game
         puts "#{@player1} will go first!"
 
         def initialize_deck
-            @card_creator = Cards.new
-            @deck_creator = Deck.new
 
-            @card = @card_creator.initialize
+            @card_creator = Cards.new
+            @cards = @card_creator.initialize
+
+            @deck_creator = Deck.new
             @deck = @deck_creator.initialize
 
-            @deck.output_deck
+            
+
     
         end
 
