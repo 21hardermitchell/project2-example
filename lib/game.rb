@@ -20,6 +20,7 @@ class Game
         puts "The game will now begin...#{@player1} will go first!\n\n"
 
         @deck_creator = Deck.new
+        @deck_creator.shuffle
         @deck_creator.output_deck
         
     end
