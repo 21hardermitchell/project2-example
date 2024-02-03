@@ -23,7 +23,7 @@ class Deck
         end
     end
     
-    def output_deck
+    def output_deck    
         @deck.each do |card|
             card.output_cards
         end
