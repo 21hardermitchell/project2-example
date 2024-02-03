@@ -31,7 +31,7 @@ class Deck
             numbers.each do |number|
                 shapes.each do |shape|
                     fills.each do |fill|
-                        card = Card.new(color, number, shape, fill)
+                        card = Cards.new(color, number, shape, fill)
                         @deck << card
                     end
                 end
