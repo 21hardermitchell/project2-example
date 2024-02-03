@@ -17,9 +17,7 @@ class Game
 
         @player1 = @players[0]
 
-        puts "The game will now begin..."
-
-        puts "#{@player1} will go first!"
+        puts "The game will now begin...#{@player1} will go first!\n\n"
 
         @deck_creator = Deck.new
         @deck_creator.output_deck

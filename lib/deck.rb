@@ -22,10 +22,15 @@ class Deck
             end
         end
     end
+
+    def shuffle
+        @deck.shuffle
+    end
     
     def output_deck    
+
         @deck.each do |card|
-            card.output_cards
+            card.output_cards      
         end
     end
 end
