@@ -11,7 +11,11 @@ class Cards
      end
 
      def output_cards
-        puts "#{self.color} of #{self.number} of #{self.shape} of #{self.fill}"
+        if("#{self.number}" == "One")
+            puts "#{self.number} #{self.color} #{self.shape} that is #{self.fill}"
+        else
+            puts "#{self.number} #{self.color} #{self.shape}'s that are #{self.fill}"
+        end
      end
 
 end
