@@ -1,4 +1,5 @@
 require_relative 'player_creator'
+require_relative 'cards'
 
 class Game
 
@@ -18,6 +19,8 @@ class Game
         puts "The game will now begin..."
 
         puts "#{@player1} will go first!"
+
+        puts cards.output_deck
 
     end
 
