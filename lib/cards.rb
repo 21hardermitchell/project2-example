@@ -10,6 +10,11 @@ class Cards
         @fill = fill
      end
 
+     def output_cards
+        puts "#{self.color} of #{self.number} of #{self.shape} of #{self.fill}"
+     end
+
+end
 
 class Deck
 
@@ -34,3 +39,9 @@ class Deck
         end
     end
     
+    def output_deck
+        @deck.each do |card|
+            card.output_cards
+        end
+    end
+end
