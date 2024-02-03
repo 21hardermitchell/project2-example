@@ -1,5 +1,6 @@
 require_relative 'player_creator'
 require_relative 'cards'
+require_relative 'deck'
 
 class Game
 
@@ -28,7 +29,7 @@ class Game
             @deck_creator = Deck.new
             @deck = @deck_creator.initialize
 
-            
+
 
     
         end
