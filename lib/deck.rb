@@ -29,7 +29,9 @@ class Deck
     
     def output_deck    
 
-        @deck.each do |card|
+        @initialDeck = @deck.first(12)
+
+        @initialDeck.each do |card|
             card.output_cards      
         end
     end
