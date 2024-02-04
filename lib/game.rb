@@ -1,6 +1,7 @@
 require_relative 'player_creator'
 require_relative 'cards'
 require_relative 'deck'
+require_relative 'set_decision'
 
 class Game
 
@@ -26,14 +27,26 @@ class Game
 
         puts "The game will now begin...#{@player1} will go first!\n\n"
 
-        @deck_creator = Deck.new
+        player1_score = 0
+        player2_score = 0
+
+        deck = []
+        @deck_creator = Deck.new(deck)
         @deck_creator.shuffle
         @deck_creator.output_deck
 
         puts "#{@player1}'s Selection: "
         selections = gets.chomp
-        selectionsArray = selections.split(" ")
+        selections_array = selections.split(" ")
+
+        selection_one = deck[selections_array[0].to_i]
+        selection_two = deck[selections_array[1].to_i]
+        selection_three = deck[selections_array[2].to_i]
+        @set_guess = Set.new(selection_one, selection_two, selection_three)
+
+        @set_guess.decision
         
+
     end
 
 end

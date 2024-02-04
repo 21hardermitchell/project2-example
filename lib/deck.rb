@@ -2,9 +2,9 @@ require_relative 'cards'
 
 class Deck
 
-    def initialize 
+    def initialize(deck)
 
-        @deck = []
+        @deck = deck
 
         colors = ["Red", "Green", "Purple"]
         numbers = ["One", "Two", "Three"]
