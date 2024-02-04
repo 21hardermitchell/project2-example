@@ -30,7 +30,9 @@ class Game
         @deck_creator.shuffle
         @deck_creator.output_deck
 
-
+        puts "#{@player1}'s Selection: "
+        selections = gets.chomp
+        selectionsArray = selections.split(" ")
         
     end
 
