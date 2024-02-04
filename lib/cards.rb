@@ -11,9 +11,9 @@ class Cards
 
      def output_cards
         if("#{self.number}" == "One")
-            puts "[#{@initialDeck.find_index(card)}] #{self.number} #{self.color} #{self.shape} that is #{self.fill}"
+            puts "#{self.number} #{self.color} #{self.shape} that is #{self.fill}\n\n"
         else
-            puts "[#{@initialDeck.find_index(card)}] #{self.number} #{self.color} #{self.shape}'s that are #{self.fill}"
+            puts "#{self.number} #{self.color} #{self.shape}'s that are #{self.fill}\n\n"
         end
      end
 

@@ -30,6 +30,7 @@ class Deck
     def output_deck   
             @initialDeck = @deck.first(12) 
             @initialDeck.each do |card|
+                puts "[#{(@initialDeck.find_index(card)) + 1}]: "
                 card.output_cards
             end
     end
