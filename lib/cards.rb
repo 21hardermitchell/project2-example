@@ -1,4 +1,3 @@
-
 class Cards
 
      attr_reader :color, :number, :shape, :fill
@@ -11,11 +10,10 @@ class Cards
      end
 
      def output_cards
-        index = 1
         if("#{self.number}" == "One")
-            puts "[#{index}] #{self.number} #{self.color} #{self.shape} that is #{self.fill}"
+            puts "[#{@initialDeck.find_index(card)}] #{self.number} #{self.color} #{self.shape} that is #{self.fill}"
         else
-            puts "[#{index}] #{self.number} #{self.color} #{self.shape}'s that are #{self.fill}"
+            puts "[#{@initialDeck.find_index(card)}] #{self.number} #{self.color} #{self.shape}'s that are #{self.fill}"
         end
      end
 
