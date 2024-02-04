@@ -11,10 +11,13 @@ class Cards
      end
 
      def output_cards
+        index = 1
         if("#{self.number}" == "One")
-            puts "#{self.number} #{self.color} #{self.shape} that is #{self.fill}"
+            puts "[#{index}] #{self.number} #{self.color} #{self.shape} that is #{self.fill}"
+            index += 1
         else
-            puts "#{self.number} #{self.color} #{self.shape}'s that are #{self.fill}"
+            puts "[#{index}] #{self.number} #{self.color} #{self.shape}'s that are #{self.fill}"
+            index += 1
         end
      end
 
