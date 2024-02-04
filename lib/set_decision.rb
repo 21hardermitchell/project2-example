@@ -12,9 +12,9 @@ class Set
 
     def decision
 
-        puts "#{self.card_one}"
-        puts "#{self.card_two}"
-        puts "#{self.card_three}"
+        puts "#{card_one.color}"
+        puts "#{card_two.color}"
+        puts "#{card_three.color}"
 
     end
 

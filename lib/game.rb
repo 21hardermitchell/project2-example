@@ -39,9 +39,9 @@ class Game
         selections = gets.chomp
         selections_array = selections.split(" ")
 
-        selection_one = deck[selections_array[0].to_i]
-        selection_two = deck[selections_array[1].to_i]
-        selection_three = deck[selections_array[2].to_i]
+        selection_one = deck[(selections_array[0].to_i) - 1]
+        selection_two = deck[(selections_array[1].to_i) - 1]
+        selection_three = deck[(selections_array[2].to_i) -1]
         @set_guess = Set.new(selection_one, selection_two, selection_three)
 
         @set_guess.decision
