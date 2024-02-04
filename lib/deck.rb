@@ -26,11 +26,11 @@ class Deck
     def shuffle
         @deck.shuffle!
     end
-    
-    def output_deck    
-        @initialDeck = @deck.first(12)
-        @initialDeck.each do |card|
-            card.output_cards
-        end
+
+    def output_deck   
+            @initialDeck = @deck.first(12) 
+            @initialDeck.each do |card|
+                card.output_cards
+            end
     end
 end

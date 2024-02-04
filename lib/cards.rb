@@ -14,10 +14,8 @@ class Cards
         index = 1
         if("#{self.number}" == "One")
             puts "[#{index}] #{self.number} #{self.color} #{self.shape} that is #{self.fill}"
-            index += 1
         else
             puts "[#{index}] #{self.number} #{self.color} #{self.shape}'s that are #{self.fill}"
-            index += 1
         end
      end
 
