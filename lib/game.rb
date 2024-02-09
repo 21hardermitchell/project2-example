@@ -26,7 +26,10 @@ class Game
         puts "Step 4: Once the 60 seconds is up, an announcement will be made that the turn is up and it is now the second players turn.\n\n"
         puts "Step 5: First player to get to 5 points will be crowned the victor!\n\n"
 
-        puts "The game will now begin...#{@player1} will go first!\n\n"
+        puts "The game will begin in 3 seconds!...#{@player1} will go first!\n\n"
+        puts "If no SET can be found on the screen type ADD for 3 more cards!\n\n"
+
+        sleep 5
 
         @player1_score = 0
         @player2_score = 0
