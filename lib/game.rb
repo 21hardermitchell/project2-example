@@ -2,6 +2,7 @@ require_relative 'player_creator'
 require_relative 'cards'
 require_relative 'deck'
 require_relative 'set_decision'
+require_relative 'replace_cards'
 
 class Game
 
@@ -45,6 +46,8 @@ class Game
         @set_guess = Set.new(selection_one, selection_two, selection_three)
 
         @set_guess.decision
+
+        @do_replace = Replace.new(deck, ((selections_array[0].to_i) - 1), ((selections_array[1].to_i) - 1), ((selections_array[2].to_i) -1))
         
 
     end

@@ -31,10 +31,6 @@ class Set
 
         end
 
-        puts "#{card_one.color}"
-        puts "#{card_two.color}"
-        puts "#{card_three.color}"
-
     end
 
 end
