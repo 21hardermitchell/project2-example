@@ -24,6 +24,7 @@ class Set
             (card_one.color != card_three.color))))
 
              puts "You found a SET!"
+             puts "The cards in the SET have now been replaced!\n\n"
 
              return true
 

@@ -36,10 +36,4 @@ class Deck
             card.output_cards
         end
     end
-
-    def deal_more
-
-
-    end
-
 end
