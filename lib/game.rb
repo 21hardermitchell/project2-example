@@ -38,6 +38,8 @@ class Game
         @deck_creator = Deck.new(deck)
         @deck_creator.shuffle
         @deck_creator.output_deck
+
+        @values = Array(1..81)
         @deck_pos = 12
 
         puts "#{@player1}'s Selection: "
@@ -51,16 +53,24 @@ class Game
 
             selections_array = response.split(" ")
 
-            selection_one = deck[(selections_array[0].to_i) - 1]
-            selection_two = deck[(selections_array[1].to_i) - 1]
-            selection_three = deck[(selections_array[2].to_i) -1]
-            @set_guess = Set.new(selection_one, selection_two, selection_three)
+            if(@values.include?((selections_array[0].to_i)) && @values.include?((selections_array[1].to_i)) && @values.include?((selections_array[2].to_i)))
 
-            if (@set_guess.decision == true)
+                selection_one = deck[(selections_array[0].to_i) - 1]
+                selection_two = deck[(selections_array[1].to_i) - 1]
+                selection_three = deck[(selections_array[2].to_i) -1]
+                @set_guess = Set.new(selection_one, selection_two, selection_three)
+
+                if (@set_guess.decision == true)
             
-                @do_replace = Replace.new(deck, ((selections_array[0].to_i) - 1), ((selections_array[1].to_i) - 1), ((selections_array[2].to_i) -1), @deck_pos)
-                @do_replace.replace
-                @deck_pos = @deck_pos.to_i + 3
+                    @do_replace = Replace.new(deck, ((selections_array[0].to_i) - 1), ((selections_array[1].to_i) - 1), ((selections_array[2].to_i) - 1), @deck_pos)
+                    @do_replace.replace
+                    @deck_pos = @deck_pos.to_i + 3
+                end
+
+            else
+
+                puts "ERROR: enter valid numbers or ADD for more cards!"
+
             end
         end
     end
