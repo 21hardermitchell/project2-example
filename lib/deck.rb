@@ -36,4 +36,10 @@ class Deck
             card.output_cards
         end
     end
+
+    def output_new
+
+
+
+    end
 end

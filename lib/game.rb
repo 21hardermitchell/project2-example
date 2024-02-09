@@ -3,6 +3,7 @@ require_relative 'cards'
 require_relative 'deck'
 require_relative 'set_decision'
 require_relative 'replace_cards'
+require_relative 'add_cards'
 
 class Game
 
@@ -47,7 +48,9 @@ class Game
 
         if(response == "ADD")
 
-            puts "You tried adding cards."
+            @add_cards = Add.new(deck, @deck_pos)
+
+            @add_cards.add
 
         else
 
