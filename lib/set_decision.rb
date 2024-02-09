@@ -12,6 +12,25 @@ class Set
 
     def decision
 
+        if(
+            (((card_one.number == card_two.number) && (card_two.number == card_three.number))||
+            ((card_one.number != card_two.number) && (card_two.number != card_three.number) &&
+            (card_one.number != card_three.number)))&&(((card_one.shape == card_two.shape) && (card_two.shape == card_three.shape))||
+            ((card_one.shape != card_two.shape) && (card_two.shape != card_three.shape) &&
+            (card_one.shape != card_three.shape)))&&(((card_one.fill == card_two.fill) && (card_two.fill == card_three.fill))||
+            ((card_one.fill != card_two.fill) && (card_two.fill != card_three.fill) &&
+            (card_one.fill != card_three.fill)))&&(((card_one.color == card_two.color) && (card_two.color == card_three.color))||
+            ((card_one.color != card_two.color) && (card_two.color != card_three.color) &&
+            (card_one.color != card_three.color))))
+
+             puts "You found a SET!"
+
+        else
+
+            puts "Not a SET!"
+
+        end
+
         puts "#{card_one.color}"
         puts "#{card_two.color}"
         puts "#{card_three.color}"
