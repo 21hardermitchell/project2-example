@@ -25,9 +25,13 @@ class Set
 
              puts "You found a SET!"
 
+             return true
+
         else
 
             puts "Not a SET!"
+
+            return false
 
         end
 
