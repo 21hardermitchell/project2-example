@@ -41,22 +41,27 @@ class Game
         @deck_pos = 12
 
         puts "#{@player1}'s Selection: "
-        selections = gets.chomp
-        selections_array = selections.split(" ")
+        response = gets.chomp
 
-        selection_one = deck[(selections_array[0].to_i) - 1]
-        selection_two = deck[(selections_array[1].to_i) - 1]
-        selection_three = deck[(selections_array[2].to_i) -1]
-        @set_guess = Set.new(selection_one, selection_two, selection_three)
+        if(response == "ADD")
 
-        if (@set_guess.decision == true)
+            puts "You tried adding cards."
+
+        else
+
+            selections_array = response.split(" ")
+
+            selection_one = deck[(selections_array[0].to_i) - 1]
+            selection_two = deck[(selections_array[1].to_i) - 1]
+            selection_three = deck[(selections_array[2].to_i) -1]
+            @set_guess = Set.new(selection_one, selection_two, selection_three)
+
+            if (@set_guess.decision == true)
             
-            @do_replace = Replace.new(deck, ((selections_array[0].to_i) - 1), ((selections_array[1].to_i) - 1), ((selections_array[2].to_i) -1), @deck_pos)
-            @do_replace.replace
-            @deck_pos = @deck_pos.to_i + 3
+                @do_replace = Replace.new(deck, ((selections_array[0].to_i) - 1), ((selections_array[1].to_i) - 1), ((selections_array[2].to_i) -1), @deck_pos)
+                @do_replace.replace
+                @deck_pos = @deck_pos.to_i + 3
+            end
         end
-        
-
     end
-
 end
