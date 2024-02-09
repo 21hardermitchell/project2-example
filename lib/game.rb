@@ -28,13 +28,14 @@ class Game
 
         puts "The game will now begin...#{@player1} will go first!\n\n"
 
-        player1_score = 0
-        player2_score = 0
+        @player1_score = 0
+        @player2_score = 0
 
         deck = []
         @deck_creator = Deck.new(deck)
         @deck_creator.shuffle
         @deck_creator.output_deck
+        @deck_pos = 12
 
         puts "#{@player1}'s Selection: "
         selections = gets.chomp
@@ -47,7 +48,9 @@ class Game
 
         @set_guess.decision
 
-        @do_replace = Replace.new(deck, ((selections_array[0].to_i) - 1), ((selections_array[1].to_i) - 1), ((selections_array[2].to_i) -1))
+        @do_replace = Replace.new(deck, ((selections_array[0].to_i) - 1), ((selections_array[1].to_i) - 1), ((selections_array[2].to_i) -1), @deck_pos)
+
+        @do_replace.replace
         
 
     end

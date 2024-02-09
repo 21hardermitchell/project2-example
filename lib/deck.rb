@@ -1,5 +1,6 @@
 require_relative 'cards'
 require_relative 'set_decision'
+require_relative'replace_cards'
 
 class Deck
 
