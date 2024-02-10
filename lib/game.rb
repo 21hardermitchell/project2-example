@@ -27,10 +27,10 @@ class Game
         puts "Step 4: Once the 60 seconds is up, an announcement will be made that the turn is up and it is now the second players turn.\n\n"
         puts "Step 5: First player to get to 5 points will be crowned the victor!\n\n"
 
-        puts "The game will begin in 3 seconds!...#{@player1} will go first!\n\n"
+        puts "The game will begin in 10 seconds!...#{@player1} will go first!\n\n"
         puts "If no SET can be found on the screen type ADD for 3 more cards!\n\n"
 
-        sleep 5
+        sleep 10
 
         @player1_score = 0
         @player2_score = 0
@@ -43,36 +43,38 @@ class Game
         @values = Array(1..81)
         @deck_pos = 12
 
-        puts "#{@player1}'s Selection: "
-        response = gets.chomp
+        while((@player1_score.to_i != 5 ) && (@player2_score.to_i != 5))
 
-        if(response == "ADD")
+            puts "#{@player1}'s Selection: "
+            response = gets.chomp
 
-            @add_cards = Add.new(deck, @deck_pos)
-            @add_cards.add
+            if(response == "ADD")
 
-        else
-
-            selections_array = response.split(" ")
-
-            if(@values.include?((selections_array[0].to_i)) && @values.include?((selections_array[1].to_i)) && @values.include?((selections_array[2].to_i)))
-
-                selection_one = deck[(selections_array[0].to_i) - 1]
-                selection_two = deck[(selections_array[1].to_i) - 1]
-                selection_three = deck[(selections_array[2].to_i) -1]
-                @set_guess = Set.new(selection_one, selection_two, selection_three)
-
-                if (@set_guess.decision == true)
-            
-                    @do_replace = Replace.new(deck, ((selections_array[0].to_i) - 1), ((selections_array[1].to_i) - 1), ((selections_array[2].to_i) - 1), @deck_pos)
-                    @do_replace.replace
-                    @deck_pos = @deck_pos.to_i + 3
-                end
+                @add_cards = Add.new(deck, @deck_pos)
+                @add_cards.add
 
             else
 
-                puts "ERROR: enter valid numbers or ADD for more cards!"
+                selections_array = response.split(" ")
 
+                if(@values.include?((selections_array[0].to_i)) && @values.include?((selections_array[1].to_i)) && @values.include?((selections_array[2].to_i)))
+
+                    selection_one = deck[(selections_array[0].to_i) - 1]
+                    selection_two = deck[(selections_array[1].to_i) - 1]
+                    selection_three = deck[(selections_array[2].to_i) -1]
+                    @set_guess = Set.new(selection_one, selection_two, selection_three)
+
+                    if (@set_guess.decision == true)
+            
+                        @do_replace = Replace.new(deck, ((selections_array[0].to_i) - 1), ((selections_array[1].to_i) - 1), ((selections_array[2].to_i) - 1), @deck_pos)
+                        @do_replace.replace
+                        @deck_pos = @deck_pos.to_i + 3
+                    end
+
+                else
+
+                    puts "ERROR: enter valid numbers or ADD for more cards!"
+                end
             end
         end
     end
