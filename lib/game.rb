@@ -29,7 +29,7 @@ class Game
         puts "The game will begin in 10 seconds!...#{@player1} will go first!\n\n"
         puts "If no SET can be found on the screen type ADD for 3 more cards!\n\n"
 
-        sleep 10
+        sleep 2
 
         @current_player_number = 0
         @player1_score = 0
@@ -56,6 +56,19 @@ class Game
                 @add_cards = Add.new(deck, @deck_pos)
                 @add_cards.add
                 @deck_pos = @deck_pos.to_i + 3
+
+
+            elsif((response == "NEXT"))
+
+                if (@current_player_number.to_i == 0)
+
+                    @current_player_number = @current_player_number.to_i + 1
+    
+                elsif (@current_player_number.to_i == 1)
+    
+                    @current_player_number = @current_player_number.to_i - 1
+    
+                end
 
             else
 
@@ -89,17 +102,6 @@ class Game
                     puts "ERROR: enter valid numbers or ADD for more cards!"
                 end
             end
-
-            if (@current_player_number.to_i == 0)
-
-                @current_player_number = @current_player_number.to_i + 1
-
-            elsif (@current_player_number.to_i == 1)
-
-                @current_player_number = @current_player_number.to_i - 1
-
-            end
-
         end
     end
 end
