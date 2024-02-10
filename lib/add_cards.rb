@@ -13,7 +13,9 @@ class Add
 
     def add
 
-        
+        @new_deck = Deck.new(deck)
+
+        @new_deck.output_new(deck_pos.to_i + 3)
 
     end
 

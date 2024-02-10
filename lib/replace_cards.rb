@@ -19,7 +19,7 @@ class Replace
         deck[pos_two] = deck[deck_pos + 2]
         deck[pos_three] = deck[deck_pos + 3]
 
-        @newDeck = Deck.new(deck)
-        @newDeck.output_deck
+        @new_deck = Deck.new(deck)
+        @new_deck.output_deck
     end
 end
