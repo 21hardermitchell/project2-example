@@ -19,6 +19,10 @@ class Replace
         deck[pos_two] = deck[@deck_pos.to_i + 2]
         deck[pos_three] = deck[@deck_pos.to_i + 3]
 
+        @deck.delete_at(@deck_pos.to_i + 1)
+        @deck.delete_at(@deck_pos.to_i + 2)
+        @deck.delete_at(@deck_pos.to_i + 3)
+
         @new_deck = Deck.new(deck)
         @new_deck.output_new(@deck_pos.to_i)
     end
