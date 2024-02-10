@@ -86,16 +86,24 @@ class Game
                         if (@current_player_number.to_i == 0)
 
                             @player1_score = @player1_score.to_i + 1
+                            puts "You found a SET! #{@current_player} gained a point!"
+                            puts "The cards in the SET have now been replaced!\n\n"
+
             
                         elsif (@current_player_number.to_i == 1)
             
-                            @player2_score = @player_score.to_i + 1
+                            @player2_score = @player2_score.to_i + 1
             
                         end
             
                         @do_replace = Replace.new(deck, ((selections_array[0].to_i) - 1), ((selections_array[1].to_i) - 1), ((selections_array[2].to_i) - 1), @deck_pos)
                         @do_replace.replace
                         @max = @max.to_i - 3
+
+                    else
+
+                        puts "Not a SET! Try again!"
+
                     end
                 else
 

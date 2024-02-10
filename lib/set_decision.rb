@@ -21,15 +21,9 @@ class Set
             (card_one.fill != card_three.fill)))&&(((card_one.color == card_two.color) && (card_two.color == card_three.color))||
             ((card_one.color != card_two.color) && (card_two.color != card_three.color) &&
             (card_one.color != card_three.color))))
-
-             puts "You found a SET!"
-             puts "The cards in the SET have now been replaced!\n\n"
-
-             return true
+            return true
 
         else
-
-            puts "Not a SET! Try again!"
 
             return false
 
