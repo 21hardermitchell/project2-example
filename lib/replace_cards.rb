@@ -1,5 +1,4 @@
 require_relative 'deck'
-require_relative 'cards'
 
 class Replace
 
@@ -22,8 +21,6 @@ class Replace
         @deck.delete_at(@deck_pos.to_i)
         @deck.delete_at(@deck_pos.to_i + 1)
         @deck.delete_at(@deck_pos.to_i + 2)
-
-        
 
         @new_deck = Deck.new(deck)
         @new_deck.output_new(@deck_pos.to_i)

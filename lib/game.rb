@@ -1,5 +1,4 @@
 require_relative 'player_creator'
-require_relative 'cards'
 require_relative 'deck'
 require_relative 'set_decision'
 require_relative 'replace_cards'
