@@ -20,6 +20,6 @@ class Replace
         deck[pos_three] = deck[deck_pos + 3]
 
         @new_deck = Deck.new(deck)
-        @new_deck.output_new
+        @new_deck.output_new(@deck_pos)
     end
 end

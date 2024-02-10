@@ -52,6 +52,7 @@ class Game
 
                 @add_cards = Add.new(deck, @deck_pos)
                 @add_cards.add
+                @deck_pos = @deck_pos.to_i + 3
 
             else
 
@@ -65,6 +66,8 @@ class Game
                     @set_guess = Set.new(selection_one, selection_two, selection_three)
 
                     if (@set_guess.decision == true)
+
+                        @player1_score = @player1_score.to_i + 1
             
                         @do_replace = Replace.new(deck, ((selections_array[0].to_i) - 1), ((selections_array[1].to_i) - 1), ((selections_array[2].to_i) - 1), @deck_pos)
                         @do_replace.replace
