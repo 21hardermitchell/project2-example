@@ -42,13 +42,14 @@ class Game
 
         @values = Array(1..81)
         @deck_pos = 12
+        @max = 78
 
         while((@player1_score.to_i != 2) && (@player2_score.to_i != 2))
 
             puts "#{@player1}'s Selection: "
             response = gets.chomp
 
-            if(response == "ADD")
+            if((response == "ADD") && (@deck_pos <= @max))
 
                 @add_cards = Add.new(deck, @deck_pos)
                 @add_cards.add
@@ -71,6 +72,7 @@ class Game
             
                         @do_replace = Replace.new(deck, ((selections_array[0].to_i) - 1), ((selections_array[1].to_i) - 1), ((selections_array[2].to_i) - 1), @deck_pos)
                         @do_replace.replace
+                        @max = @max.to_i - 3
                     end
                 else
 
