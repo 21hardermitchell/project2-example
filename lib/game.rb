@@ -63,7 +63,7 @@ class Game
 
                     selection_one = deck[(selections_array[0].to_i) - 1]
                     selection_two = deck[(selections_array[1].to_i) - 1]
-                    selection_three = deck[(selections_array[2].to_i) -1]
+                    selection_three = deck[(selections_array[2].to_i) - 1]
                     @set_guess = Set.new(selection_one, selection_two, selection_three)
 
                     if (@set_guess.decision == true)
