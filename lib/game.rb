@@ -49,7 +49,6 @@ class Game
         if(response == "ADD")
 
             @add_cards = Add.new(deck, @deck_pos)
-
             @add_cards.add
 
         else
