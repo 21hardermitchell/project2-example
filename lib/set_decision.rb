@@ -30,7 +30,7 @@ class Set
 
         else
 
-            puts "Not a SET!"
+            puts "Not a SET! Try again!"
 
             return false
 

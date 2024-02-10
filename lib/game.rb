@@ -43,7 +43,7 @@ class Game
         @values = Array(1..81)
         @deck_pos = 12
 
-        while((@player1_score.to_i != 5 ) && (@player2_score.to_i != 5))
+        while((@player1_score.to_i != 2) && (@player2_score.to_i != 2))
 
             puts "#{@player1}'s Selection: "
             response = gets.chomp
