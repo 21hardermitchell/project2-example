@@ -112,5 +112,8 @@ class Game
                 end
             end
         end
+
+        puts "#{@current_player} won! Congratulations!"
+
     end
 end
