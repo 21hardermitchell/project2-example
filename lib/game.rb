@@ -48,7 +48,6 @@ class Game
                 @add_cards.add
                 @deck_pos = @deck_pos.to_i + 3
 
-
             elsif((response == "NEXT"))
 
                 if (@current_player_number.to_i == 0)
@@ -100,7 +99,7 @@ class Game
                 else
 
                     puts "ERROR: enter valid numbers or ADD for more cards!"
-                    
+
                 end
             end
         end
