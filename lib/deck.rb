@@ -18,7 +18,7 @@ class Deck
                 shapes.each do |shape|
                     fills.each do |fill|
                         card = Cards.new(color, number, shape, fill)
-                        @deck << card
+                        deck << card
                     end
                 end
             end
@@ -26,11 +26,11 @@ class Deck
     end
 
     def shuffle
-        @deck.shuffle!
+        deck.shuffle!
     end
 
     def output_deck   
-        @initial_deck = @deck.first(12) 
+        @initial_deck = deck.first(12) 
         @initial_deck.each do |card|
             puts "[#{(@initial_deck.find_index(card)) + 1}]: "
             card.output_cards
@@ -39,7 +39,7 @@ class Deck
 
     def output_new(size)
 
-        @bigger_deck = @deck.first(size)
+        @bigger_deck = deck.first(size)
         @bigger_deck.each do |card|
             puts "[#{(@bigger_deck.find_index(card)) + 1}]: "
             card.output_cards

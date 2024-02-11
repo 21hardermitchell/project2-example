@@ -98,7 +98,7 @@ class Game
                 
                 else
                     
-                    puts "ERROR: enter valid numbers or ADD for more cards!"
+                    puts "ERROR: enter valid numbers or ADD/NEXT"
 
                 end
             end

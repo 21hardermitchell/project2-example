@@ -14,16 +14,16 @@ class Replace
 
     def replace
 
-        deck[pos_one] = deck[@deck_pos.to_i]
-        deck[pos_two] = deck[@deck_pos.to_i + 1]
-        deck[pos_three] = deck[@deck_pos.to_i + 2]
+        deck[pos_one] = deck[deck_pos.to_i]
+        deck[pos_two] = deck[deck_pos.to_i + 1]
+        deck[pos_three] = deck[deck_pos.to_i + 2]
 
-        @deck.delete_at(@deck_pos.to_i)
-        @deck.delete_at(@deck_pos.to_i + 1)
-        @deck.delete_at(@deck_pos.to_i + 2)
+        deck.delete_at(deck_pos.to_i)
+        deck.delete_at(deck_pos.to_i + 1)
+        deck.delete_at(deck_pos.to_i + 2)
 
         @new_deck = Deck.new(deck)
-        @new_deck.output_new(@deck_pos.to_i)
+        @new_deck.output_new(deck_pos.to_i)
         
     end
 end
