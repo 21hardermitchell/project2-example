@@ -39,7 +39,7 @@ class Game
 
             @current_player = @players[@current_player_number.to_i]
 
-            puts "#{@current_player}'s Selection: (ADD for new cards), (NEXT for next player)"
+            puts "#{@current_player}'s Selection: (ADD for 3 more cards), (NEXT for next player)"
             response = gets.chomp
 
             if((response == "ADD") && (@deck_pos <= @max))
