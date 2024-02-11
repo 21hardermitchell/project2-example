@@ -4,9 +4,11 @@ class Set
     attr_reader :card_one, :card_two, :card_three
 
     def initialize(card_one, card_two, card_three)
+
         @card_one = card_one
         @card_two = card_two
         @card_three = card_three
+
     end
 
     def decision
@@ -29,7 +31,5 @@ class Set
             @decision = false
 
         end
-
     end
-
 end
