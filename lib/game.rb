@@ -19,8 +19,8 @@ class Game
 
         @player1 = @players[0]
 
-        puts "The game will begin in 10 seconds!...#{@player1} will go first!\n\n"
-        sleep 2
+        puts "The game will begin in 5 seconds!...#{@player1} will go first!\n\n"
+        sleep 5
 
         @current_player_number = 0
         @player1_score = 0
