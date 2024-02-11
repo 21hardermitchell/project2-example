@@ -21,11 +21,12 @@ class Set
             (card_one.fill != card_three.fill)))&&(((card_one.color == card_two.color) && (card_two.color == card_three.color))||
             ((card_one.color != card_two.color) && (card_two.color != card_three.color) &&
             (card_one.color != card_three.color))))
-            return true
+            
+            @decision = true
 
         else
 
-            return false
+            @decision = false
 
         end
 

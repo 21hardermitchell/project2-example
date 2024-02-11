@@ -91,15 +91,16 @@ class Game
                         puts "You found a SET! #{@current_player} gained a point!"
                         puts "The cards in the SET have now been replaced!\n\n"
 
-
                     else
 
                         puts "Not a SET! Try again!"
 
                     end
+                
                 else
 
                     puts "ERROR: enter valid numbers or ADD for more cards!"
+                    
                 end
             end
         end
