@@ -11,6 +11,7 @@ class Set
 
     end
 
+    #This method decides if a SET was found by comparing the attributes of each card.
     def decision
 
         if(

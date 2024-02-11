@@ -12,6 +12,7 @@ class Replace
         @deck_pos = deck_pos
     end
 
+    #This method replaces the correct cards in the SET and then deletes the cards that were used to replace them.
     def replace
 
         deck[pos_one] = deck[deck_pos.to_i]

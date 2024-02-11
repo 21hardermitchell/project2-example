@@ -11,6 +11,7 @@ class Add
 
     end
 
+    #This method adds 3 to the deck_pos and outputs a larger deck.
     def add
 
         @new_deck = Deck.new(deck)

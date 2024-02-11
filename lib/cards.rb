@@ -9,6 +9,7 @@ class Cards
         @fill = fill
      end
 
+     #This method outputs the cards to the screen in sentence form.
      def output_cards
         if("#{self.number}" == "One")
             puts "#{self.number} #{self.color} #{self.shape} that is #{self.fill}\n\n"

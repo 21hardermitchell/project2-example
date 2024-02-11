@@ -4,6 +4,7 @@ class Deck
 
     attr_reader :deck
 
+    #This method creates 81 cards by iterating through every combination of attributes.
     def initialize(deck)
 
         @deck = deck
@@ -29,6 +30,7 @@ class Deck
         deck.shuffle!
     end
 
+    #Outputs first 12 cards to the terminal.
     def output_deck   
         @initial_deck = deck.first(12) 
         @initial_deck.each do |card|
@@ -37,6 +39,7 @@ class Deck
         end
     end
 
+    #Outputs first (size) cards to the terminal.
     def output_new(size)
 
         @bigger_deck = deck.first(size)
