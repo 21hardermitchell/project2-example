@@ -35,7 +35,7 @@ class Game
         @deck_pos = 12
         @max = 78
 
-        while((@player1_score.to_i != 2) && (@player2_score.to_i != 2))
+        while((@player1_score.to_i != 5) && (@player2_score.to_i != 5))
 
             @current_player = @players[@current_player_number.to_i]
 
