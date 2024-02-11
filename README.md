@@ -3,11 +3,11 @@ Mitchell Harder
 
 This program creates a text-based Game of Set between 2 present players.
 
-When the program begins, the players will each be prompted to enter their names. After which, the player who goes first will be decided and there will be 10 seconds until the game officially begins.
+When the program begins, the players will each be prompted to enter their names. After which, the player who goes first will be decided and there will be 5 seconds until the game officially begins.
 
 Game Description:
 
-    After the 10 seconds is up, 12 "cards" will be printed out on the terminal.
+    After the 5 seconds is up, 12 "cards" will be printed out on the terminal.
 
     They will appear as follows [1-12]:
 
